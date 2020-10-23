@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn build_markov_chain(text: &str, k: usize) -> HashMap<&str, String> {
+pub fn build(text: &str, k: usize) -> HashMap<&str, String> {
     let mut chain = start_building(&text, k);
     let mut state = &text[..k];
     let rest_of_text = &text[k..];

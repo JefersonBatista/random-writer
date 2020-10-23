@@ -1,5 +1,5 @@
 mod markov_chain;
-mod randomness;
+mod random_writer;
 use std::env;
 use std::fs;
 
@@ -20,9 +20,11 @@ fn main() {
         .parse::<usize>()
         .expect("The value for 'l' isn't a number!");
 
-    let chain = markov_chain::build_markov_chain(&text, k);
+    let chain = markov_chain::build(&text, k);
 
-    for (state, chars) in &chain {
+    /* for (state, chars) in &chain {
         println!("{}: {}", state, chars);
-    }
+    } */
+
+    random_writer::write(chain, l);
 }
