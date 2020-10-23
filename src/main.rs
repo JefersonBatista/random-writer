@@ -22,9 +22,6 @@ fn main() {
 
     let chain = markov_chain::build(&text, k);
 
-    /* for (state, chars) in &chain {
-        println!("{}: {}", state, chars);
-    } */
-
     random_writer::write(chain, l);
+    println!();
 }
