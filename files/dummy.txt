@@ -1,0 +1,3 @@
+Esse é apenas um pequeno texto para testes, que resolvi chamar
+de dummy. É um pequeno petisco para alimentar o meu gerador de
+lero-lero (em inglês, LeroLeroGenerator).

@@ -6,11 +6,11 @@ pub fn test_choose(state: &str, qtd: u32) {
     let mut rng = thread_rng();
 
     let mut count_letters = HashMap::new();
-    
+
     for _ in 0..qtd {
         let chosen = match state.chars().choose(&mut rng) {
             Some(letter) => letter,
-            None => continue
+            None => continue,
         };
 
         let count = count_letters.entry(chosen).or_insert(0);
