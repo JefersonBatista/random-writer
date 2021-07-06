@@ -30,5 +30,5 @@ fn start_writing(chain: &HashMap<&str, String>) -> String {
     let mut rng = thread_rng();
 
     let state = chain.keys().choose(&mut rng).expect("The chain is empty!");
-    return String::from(*state);
+    String::from(*state)
 }

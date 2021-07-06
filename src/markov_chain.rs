@@ -15,7 +15,7 @@ pub fn build(text: &str, k: usize) -> HashMap<&str, String> {
 
         let next_state = &text[begin..end];
         chain.entry(state).and_modify(|edges| edges.push(ch));
-        chain.entry(next_state).or_insert(String::new());
+        chain.entry(next_state).or_insert_with(String::new);
         state = next_state;
     }
     chain
